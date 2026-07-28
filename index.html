@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>banco internacional templario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Tela de Login -->
+    <div id="login-container" class="container">
+        <h2>Login</h2>
+        <input type="text" id="login-user" placeholder="Nome de Usuário">
+        <input type="password" id="login-pass" placeholder="Senha">
+        <button onclick="fazerLogin()">Entrar</button>
+        <p>Ainda não tem conta? <button onclick="mostrarCadastro()">Criar conta</button></p>
+    </div>
+
+    <!-- Tela de Cadastro -->
+    <div id="cadastro-container" class="container hidden">
+        <h2>Criar Conta</h2>
+        <input type="text" id="cad-user" placeholder="Nome de Usuário">
+        <input type="password" id="cad-pass" placeholder="Senha">
+        <input type="number" id="cad-saldo" placeholder="Depósito Inicial ($)">
+        <button onclick="cadastrarUsuario()">Cadastrar</button>
+        <p>Já tem conta? <button onclick="mostrarLogin()">Voltar ao Login</button></p>
+    </div>
+
+    <!-- Tela da Conta Bancária -->
+    <div id="banco-container" class="container hidden">
+        <h2>Bem-vindo, <span id="user-name"></span>!</h2>
+        <div class="saldo-box">
+            Saldo Atual: $ <span id="saldo-atual">0.00</span>
+        </div>
+
+        <div class="operacoes">
+            <h3>Fazer Operação</h3>
+            <input type="number" id="valor-op" placeholder="Valor em $">
+            <button onclick="depositar()">Depositar</button>
+            <button onclick="sacar()">Sacar</button>
+        </div>
+
+        <button class="btn-sair" onclick="sair()">Sair</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
+    <!-- Painel da Conta (Escondido até logar) -->
+    <div id="dashboard-container" class="container hidden">
+        <h2>Bem-vindo, <span id="nome-usuario">Cliente</span></h2>
+        <div class="saldo-box">
+            <p>Saldo Atual</p>
+            <h3>R$ <span id="saldo-valor">1.000,00</span></h3>
+        </div>
+
+        <div class="operacoes">
+            <h3>Realizar Operação</h3>
+            <form id="operacao-form">
+                <div class="input-group">
+                    <label for="tipo-operacao">Tipo</label>
+                    <select id="tipo-operacao">
+                        <option value="depositar">Depositar</option>
+                        <option value="sacar">Sacar</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="valor">Valor (R$)</label>
+                    <input type="number" id="valor" min="0.01" step="0.01" required>
+                </div>
+                <button type="submit" class="btn">Confirmar</button>
+            </form>
+        </div>
+
+        <button id="btn-sair" class="btn btn-sair">Sair</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

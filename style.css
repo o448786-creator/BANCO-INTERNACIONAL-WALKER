@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #ffffff; /* Texto global branco para contraste */
+}
+
+.container {
+    background: #0B0B0B; /* Fundo escuro profundo */
+    padding: 30px;
+    border-radius: 10px;
+    /* Brilho neon azul sutil ao redor do container */
+    box-shadow: 0px 4px 20px rgba(0, 159, 255, 0.2); 
+    border: 1px solid rgba(0, 159, 255, 0.3);
+    width: 300px;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #121212; /* Fundo do input escuro */
+    color: #ffffff;
+    border: 1px solid #00DFFF; /* Borda Ciano Neon */
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    /* Brilho ao focar no campo */
+    box-shadow: 0 0 10px #00DFFF; 
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #009FFF; /* Azul Neon Elétrico */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    /* Efeito de luz no botão */
+    box-shadow: 0px 0px 10px rgba(0, 159, 255, 0.5);
+}
+
+button:hover {
+    background-color: #00C5FF; /* Azul mais claro ao passar o mouse */
+    box-shadow: 0px 0px 15px #00C5FF; /* Brilho intenso */
+}
+
+.hidden {
+    display: none;
+}
+
+.saldo-box {
+    font-size: 24px;
+    color: #00DFFF; /* Texto do saldo em Ciano de alto destaque */
+    margin: 20px 0;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 223, 255, 0.5); /* Brilho no texto */
+}
+
+.operacoes {
+    background: #151515; /* Tom levemente mais claro que o container */
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    border: 1px dashed #8A00C4; /* Detalhe tracejado em Roxo Neon */
+}
+
+.btn-sair {
+    background-color: #8A00C4; /* Roxo / Violeta Neon */
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px rgba(138, 0, 196, 0.5);
+}
+
+.btn-sair:hover {
+    background-color: #BC00FE; /* Roxo mais vibrante */
+    box-shadow: 0px 0px 15px #BC00FE;
+}
